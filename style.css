@@ -1,13 +1,14 @@
 body {
    background: url(sky.png) no-repeat;
    background-size: 100%;
-    image-rendering: optimizeSpeed;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -o-crisp-edges; 
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: pixelated;
-    image-rendering: optimize-contrast;
-    -ms-interpolation-mode: nearest-neighbor;
+   image-rendering: optimizeSpeed;
+   image-rendering: -moz-crisp-edges;
+   image-rendering: -o-crisp-edges; 
+   image-rendering: -webkit-optimize-contrast;
+   image-rendering: pixelated;
+   image-rendering: optimize-contrast;
+   -ms-interpolation-mode: nearest-neighbor;
+   height: 100%;
 }
 
 .star-1 {
@@ -19,44 +20,110 @@ body {
    background-image : url(star1.png);
    background-size: 40vw 5vw;
    background-repeat: no-repeat;
-   animation: play1 1s steps(8) infinite;
+   animation: play1 4s steps(8) infinite;
+   /*animation-delay: 2s;*/
 }
 
 @keyframes play1{
-   from{background-position-x:0px;}
-   to{background-position-x:-40vw;}
+   /*to{background-position-x:0px;}
+   from{background-position-x:-40vw;}*/
+   0%{background-position-x:0px;}
+   20%{background-position-x:-40vw;}
+   20.001%,100%{background-position-x:0px;}
 }
 
 .star-2 {
-   height: 5vw;
-   width: 5vw;
+   height: 4.5vw;
+   width: 4.5vw;
    position: absolute;
-   right: 25.25%;
-   top: 30%;
+   right: 24%;
+   top: 32%;
    background-image : url(star2.png);
-   background-size: 20vw 5vw;
+   background-size: 18vw 4.5vw;
    background-repeat: no-repeat;
-   animation: play2 1s steps(4) infinite;
+   animation: play2 1.5s steps(4) infinite;
 }
 
 @keyframes play2{
-   from{background-position-x:0px;}
-   to{background-position-x:-20vw;}
+   /*from{background-position-x:0px;}
+   to{background-position-x:-18vw;}*/
+   0%{background-position-x:0px;}
+   40%{background-position-x:-18vw;}
+   40.001%,100%{background-position-x:0px;}
+
 }
 
 .star-3 {
-   height: 5vw;
-   width: 5vw;
+   height: 3.5vw;
+   width: 3.5vw;
    position: absolute;
    right: 7%;
-   top: 28%;
+   top: 30%;
    background-image : url(star3.png);
-   background-size: 25vw 5vw;
+   background-size: 17.5vw 3.5vw;
    background-repeat: no-repeat;
-   animation: play3 1s steps(5) infinite;
+   animation: play3 4s steps(5) 2s infinite;
 }
 
 @keyframes play3{
-   from{background-position-x:0px;}
-   to{background-position-x:-25vw;}
+   /*from{background-position-x:0px;}
+   to{background-position-x:-17.5vw;}*/
+   0%{background-position-x:0px;}
+   20%{background-position-x:-17.5vw;}
+   20.001%,100%{background-position-x:0px;}
+}
+
+.star-4 {
+   height: 3vw;
+   width: 3vw;
+   position: absolute;
+   right: 50%;
+   top: 2%;
+   background-image : url(star2.png);
+   background-size: 12vw 3vw;
+   background-repeat: no-repeat;
+   animation: play4 6s steps(4) -2s infinite;
+}
+
+@keyframes play4{
+   0%{background-position-x:0px;}
+   20%{background-position-x:-12vw;}
+   20.001%,100%{background-position-x:0px;}
+}
+
+.star-5 {
+   height: 2vw;
+   width: 2vw;
+   position: absolute;
+   right: 41%;
+   top: 11%;
+   background-image : url(star3.png);
+   background-size: 10vw 2vw;
+   background-repeat: no-repeat;
+   animation: play5 1.5s steps(5) -2s infinite;
+}
+
+@keyframes play5{
+   0%{background-position-x:0px;}
+   40%{background-position-x:-10vw;}
+   40.001%,100%{background-position-x:0px;}
+}
+
+.star-6 {
+   height: 2.5vw;
+   width: 2.5vw;
+   position: absolute;
+   right: 30%;
+   top: 14%;
+   background-image : url(star1.png);
+   background-size: 20vw 2.5vw;
+   background-repeat: no-repeat;
+   animation: play6 5.5s steps(8) 3s infinite;
+   /*animation-delay: 2s;*/
+}
+
+@keyframes play6{
+   0%{background-position-x:0px;}
+   12.5%{background-position-x:-20vw;}
+   12.501%,100%{background-position-x:0px;}
 }
