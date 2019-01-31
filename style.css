@@ -9,6 +9,7 @@ body {
    image-rendering: optimize-contrast;
    -ms-interpolation-mode: nearest-neighbor;
    height: 100%;
+   overflow-x: hidden;
 }
 
 .star-1 {
@@ -119,11 +120,149 @@ body {
    background-size: 20vw 2.5vw;
    background-repeat: no-repeat;
    animation: play6 5.5s steps(8) 3s infinite;
-   /*animation-delay: 2s;*/
 }
 
 @keyframes play6{
    0%{background-position-x:0px;}
    12.5%{background-position-x:-20vw;}
    12.501%,100%{background-position-x:0px;}
+}
+
+.shooting-1 {
+   height: 5vw;
+   width: 5vw;
+   position: absolute;
+   right: 20%;
+   top: 24%;
+   background-image : url(shooting1.png);
+   background-size: 35vw 5vw;
+   background-repeat: no-repeat;
+   animation: play7 8s steps(7) infinite;
+}
+
+@keyframes play7{
+   0%{
+      background-position-x:0px;
+      transform: translateY(5vh) translateX(5vw);
+      opacity: 0;
+   }
+   2% {
+      opacity: 1;
+   }
+   4% {
+      opacity: 1;
+   }
+   7%{
+      background-position-x:-35vw;
+      transform: translateY(25vh) translateX(-5vw);
+      opacity: 0;
+   }
+   7.001%,100%{
+      opacity: 0;
+   }
+}
+
+.shooting-2 {
+   height: 5vw;
+   width: 5vw;
+   position: absolute;
+   left: 20%;
+   top: 14%;
+   background-image : url(shooting2.png);
+   background-size: 35vw 5vw;
+   background-repeat: no-repeat;
+   animation: play8 4s steps(7) 3s infinite;
+   opacity: 0;
+}
+
+@keyframes play8{
+   0%{
+      background-position-x:0px;
+      transform: translateX(0vw);
+      opacity: 0;
+   }
+   4% {
+      opacity: 1;
+   }
+   6% {
+      opacity: 1;
+   }
+   9%{
+      background-position-x:-35vw;
+      transform: translateX(20vw);
+      opacity: 0;
+   }
+   9.001%,100%{
+      opacity: 0;
+   }
+}
+
+.shooting-3 {
+   height: 5vw;
+   width: 5vw;
+   position: absolute;
+   left: 30%;
+   top: 22%;
+   background-image : url(shooting3.png);
+   background-size: 35vw 5vw;
+   background-repeat: no-repeat;
+   animation: play9 6s steps(7) 3.5s infinite;
+   opacity: 0;
+}
+
+@keyframes play9{
+   0%{
+      background-position-x:0px;
+      transform: translateX(0vw);
+      opacity: 0;
+   }
+   4% {
+      opacity: 1;
+   }
+   6% {
+      opacity: 1;
+   }
+   9%{
+      background-position-x:-35vw;
+      transform: translateX(20vw);
+      opacity: 0;
+   }
+   9.001%,100%{
+      opacity: 0;
+   }
+}
+
+.shooting-4 {
+   height: 4vw;
+   width: 4vw;
+   position: absolute;
+   left: 10%;
+   top: 42%;
+   background-image : url(shooting4.png);
+   background-size: 20vw 4vw;
+   background-repeat: no-repeat;
+   animation: play10 6s steps(5) 9.5s infinite;
+   opacity: 0;
+}
+
+@keyframes play10{
+   0%{
+      background-position-x:0px;
+      transform: translateX(0vw) translateY(0vw);
+      opacity: 0;
+   }
+   4% {
+      opacity: 1;
+   }
+   6% {
+      opacity: 1;
+   }
+   9%{
+      background-position-x:-20vw;
+      transform: translateX(10vw) translateY(10vw);
+      opacity: 0;
+   }
+   9.001%,100%{
+      opacity: 0;
+   }
 }
