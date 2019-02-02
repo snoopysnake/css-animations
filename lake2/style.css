@@ -70,10 +70,10 @@ body {
 }
 
 .gill-container-1 {
-   animation: move1 20s steps(100) infinite;
+   animation: gill-move-1 20s steps(100) infinite;
 }
 
-@keyframes move1{
+@keyframes gill-move-1{
    to{
       transform: translateY(1200px) translateX(1300px);   
    }
@@ -86,10 +86,10 @@ body {
 }
 
 .gill-container-2 {
-   animation: move2 20s steps(100) 1s infinite;
+   animation: gill-move-2 20s steps(100) 1s infinite;
 }
 
-@keyframes move2{
+@keyframes gill-move-2{
    to{
       transform: translateY(1200px) translateX(1300px);   
    }
@@ -102,10 +102,10 @@ body {
 }
 
 .gill-container-3 {
-   animation: move3 18s steps(100) 1.4s infinite;
+   animation: gill-move-3 18s steps(100) 1.4s infinite;
 }
 
-@keyframes move3{
+@keyframes gill-move-3{
    to{
       transform: translateY(1100px) translateX(1200px);   
    }
@@ -117,7 +117,7 @@ body {
    top: -160px;
    position: absolute;
    background-image : url(bass.png);
-   background-size: 1280px 160px;
+   background-size: 1440px 160px;
    background-repeat: no-repeat;
 }
 
@@ -135,7 +135,7 @@ body {
       background-position-x:-320px;
    }
    100%{
-      background-position-x:-1120px;
+      background-position-x:-1280px;
    }
 }
 
@@ -146,10 +146,10 @@ body {
 }
 
 .bass-container-1 {
-   animation: move4 7s steps(100) infinite;
+   animation: bass-move-1 20s steps(100) infinite;
 }
 
-@keyframes move4{
+@keyframes bass-move-1{
    to{
       transform: translateY(500px) translateX(500px);   
    }
@@ -157,16 +157,64 @@ body {
 
 .bass-2 {
    right: 500px;
-   animation: bass-swim-2 1s steps(5) infinite;
+   animation: bass-swim-2 1.25s steps(6) infinite;
    opacity: .5;
 }
 
 .bass-container-2 {
-   animation: move5 10s steps(100) 3s infinite;
+   animation: bass-move-2 13s steps(100) 5s infinite;
 }
 
-@keyframes move5{
+@keyframes bass-move-2{
    to{
       transform: translateY(1700px) translateX(1700px);   
+   }
+}
+
+.gill-4 {
+   right: 500px;
+   animation: gill-swim 1s steps(8) infinite;
+   opacity: .56;
+}
+
+.gill-container-4 {
+   animation: gill-move-4 14s steps(100) 1.4s 2;
+}
+
+@keyframes gill-move-4{
+   to{
+      transform: translateY(1100px) translateX(1200px);   
+   }
+}
+
+.gill-5 {
+   left: 550px;
+   animation: gill-swim 1.5s steps(8) infinite;
+   opacity: .45;
+}
+
+.gill-container-5 {
+   animation: gill-move-5 21s steps(100) 2.4s 2;
+}
+
+@keyframes gill-move-5{
+   to{
+      transform: translateY(1100px) translateX(1200px);   
+   }
+}
+
+.gill-6 {
+   left: 650px;
+   animation: gill-swim 1.7s steps(8) infinite;
+   opacity: .56;
+}
+
+.gill-container-6 {
+   animation: gill-move-6 23s steps(100) 1s 2;
+}
+
+@keyframes gill-move-6{
+   to{
+      transform: translateY(1100px) translateX(1200px);   
    }
 }
