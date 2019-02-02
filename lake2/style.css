@@ -11,17 +11,162 @@ html {
 }
 
 body {
-   background: url(lake2.png) no-repeat;
-   background-size: 100vw 200vh;
-   background-position: top;
-   height: 100%;
-   width: 100%;
+   background: url(lake-background.png) no-repeat;
+   background-size: 1920px;
+   background-position: cover center;
+   height: 1080px;
+   width: 1920px;
    overflow: hidden;
    position: relative;
+}
+
+.waves {
+   background: url(waves.png) no-repeat;
+   background-size: 1920px;
+   background-position: cover center;
+   height: 1080px;
+   width: 1920px;
+   overflow: hidden;
+   position: absolute;
    animation: waves 1.1s steps(2) infinite;
 }
 
 @keyframes waves{
    from{background-position-y:0px;}
-   to{background-position-y:-200vh;}
+   to{background-position-y:-2160px;}
+}
+
+.kayak {
+   position: absolute;
+   height: 360px;
+   bottom: 180px;
+   left: 525px;
+   transform: rotate(110deg);
+}
+
+.gill {
+   height: 100px;
+   width:100px;
+   top: -100px;
+   position: absolute;
+   background-image : url(bluegill.png);
+   background-size: 800px 100px;
+   background-repeat: no-repeat;
+}
+
+@keyframes gill-swim{
+   0%{
+      background-position-x:0px 0;
+   }
+   100%{
+      background-position-x:-800px;
+   }
+}
+
+.gill-1 {
+   left: 600px;
+   animation: gill-swim 2s steps(8) infinite;
+   opacity: .55;
+}
+
+.gill-container-1 {
+   animation: move1 20s steps(100) infinite;
+}
+
+@keyframes move1{
+   to{
+      transform: translateY(1200px) translateX(1300px);   
+   }
+}
+
+.gill-2 {
+   left: 500px;
+   animation: gill-swim 2.2s steps(8) infinite;
+   opacity: .5;
+}
+
+.gill-container-2 {
+   animation: move2 20s steps(100) 1s infinite;
+}
+
+@keyframes move2{
+   to{
+      transform: translateY(1200px) translateX(1300px);   
+   }
+}
+
+.gill-3 {
+   left: 400px;
+   animation: gill-swim 1.7s steps(8) infinite;
+   opacity: .52;
+}
+
+.gill-container-3 {
+   animation: move3 18s steps(100) 1.4s infinite;
+}
+
+@keyframes move3{
+   to{
+      transform: translateY(1100px) translateX(1200px);   
+   }
+}
+
+.bass {
+   height: 160px;
+   width:160px;
+   top: -160px;
+   position: absolute;
+   background-image : url(bass.png);
+   background-size: 1280px 160px;
+   background-repeat: no-repeat;
+}
+
+@keyframes bass-swim-1{
+   0%{
+      background-position-x:-160px;
+   }
+   100%{
+      background-position-x:160px;
+   }
+}
+
+@keyframes bass-swim-2{
+   0%{
+      background-position-x:-320px;
+   }
+   100%{
+      background-position-x:-1120px;
+   }
+}
+
+.bass-1 {
+   right: 300px;
+   animation: bass-swim-1 1s steps(2) infinite;
+   opacity: .55;
+}
+
+.bass-container-1 {
+   animation: move4 7s steps(100) infinite;
+}
+
+@keyframes move4{
+   to{
+      transform: translateY(500px) translateX(500px);   
+   }
+}
+
+.bass-2 {
+   right: 500px;
+   animation: bass-swim-2 1s steps(5) infinite;
+   opacity: .5;
+}
+
+.bass-container-2 {
+   animation: move5 10s steps(100) 3s infinite;
+}
+
+@keyframes move5{
+   to{
+      transform: translateY(1700px) translateX(1700px);   
+   }
 }
