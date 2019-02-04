@@ -6,22 +6,58 @@ html {
    image-rendering: pixelated;
    image-rendering: optimize-contrast;
    -ms-interpolation-mode: nearest-neighbor;   
-   height: 100%;
-   width: 100%;
 }
 
-body {
-   background: url(bulletin.png) no-repeat;
+.background {
+   background: url(background.svg) no-repeat;
    background-size: 1920px;
-   background-position: top;
+   background-position: cover center;
+   height: 1080px;
+   width: 1920px;
+   /*overflow: hidden;*/
+   position: absolute;
+}
+
+.foreground {
+   background: url(foreground.png) no-repeat;
+   background-size: 1920px;
+   background-position: center;
    height: 1080px;
    width: 1920px;
    overflow: hidden;
-   position: relative;
-   animation: rain 2s steps(13) infinite;
+   position: absolute;
+}
+
+.bulletin {
+   position: absolute;
+   background: url(bulletin.svg) no-repeat;
+   background-size: 1920px;
+   background-position: cover center;
+   height: 1080px;
+   width: 1920px;
+}
+
+.rain {
+   background: url(rain.png) no-repeat;
+   background-size: 1920px;
+   background-position: cover center;
+   height: 1080px;
+   width: 1920px;
+   overflow: hidden;
+   position: absolute;
+   animation: rain 1.3s steps(13) infinite;
+}
+
+.text {
+   width: 480.3px;
+   height: 453.1px;
+   left: 294.2px;
+   top: 316px;
+   position: absolute;
+   padding: 20px;
 }
 
 @keyframes rain{
-   from{background-position-y:0px;}
+   from{background-position-x:0px;}
    to{background-position-y:-14040px;}
 }
