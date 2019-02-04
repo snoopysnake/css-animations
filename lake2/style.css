@@ -11,13 +11,28 @@ html {
 }
 
 body {
-   background: url(lake-background-min.png) no-repeat;
+   background-color: #5d8594;
+   overflow: hidden;
+}
+
+.shore {
+   background: url(shore.svg) no-repeat;
    background-size: 1920px;
    background-position: cover center;
    height: 1080px;
    width: 1920px;
    overflow: hidden;
-   position: relative;
+   position: absolute;
+}
+
+.rocks {
+   background: url(rocks.png) no-repeat;
+   background-size: 1920px;
+   background-position: cover center;
+   height: 1080px;
+   width: 1920px;
+   overflow: hidden;
+   position: absolute;
 }
 
 .waves {
