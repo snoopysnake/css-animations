@@ -10,9 +10,13 @@ html {
    width: 100%;
 }
 
-body {
+.lake {
    background-color: #5d8594;
    overflow: hidden;
+   height: 1080px;
+   width: 1920px;
+   position: relative;
+
 }
 
 .shore {
