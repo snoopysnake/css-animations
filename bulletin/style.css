@@ -5,59 +5,116 @@ html {
    image-rendering: -webkit-optimize-contrast;
    image-rendering: pixelated;
    image-rendering: optimize-contrast;
-   -ms-interpolation-mode: nearest-neighbor;   
+   -ms-interpolation-mode: nearest-neighbor;  
+   height: 100%;
+   width: 100%; 
+}
+
+body {
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
+   position: relative;
 }
 
 .background {
    background: url(background.svg) no-repeat;
-   background-size: 1920px;
-   background-position: cover center;
-   height: 1080px;
-   width: 1920px;
-   /*overflow: hidden;*/
-   position: absolute;
+   background-size: cover;
+   background-position: center center;
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
+   position: relative;
 }
 
 .foreground {
    background: url(foreground.png) no-repeat;
-   background-size: 1920px;
-   background-position: center;
-   height: 1080px;
-   width: 1920px;
+   background-size: cover;
+   background-position: center center;
+   height: 100%;
+   width: 170vh;
    overflow: hidden;
    position: absolute;
 }
 
-.bulletin {
-   position: absolute;
-   background: url(bulletin.svg) no-repeat;
-   background-size: 1920px;
-   background-position: cover center;
-   height: 1080px;
-   width: 1920px;
+@media (min-aspect-ratio: 4/3) {
+   .bulletin {
+      position: absolute;
+      background: url(bulletin.svg) no-repeat;
+      background-size: 100%;
+      /*background-position: bottom;*/
+      height: 1080px;
+      width: 1920px;
+      /*height: 160vh;
+      width: 100vw;*/
+   }
+
+   .rain {
+      background: url(rain.png) no-repeat;
+      background-size: cover;
+      background-position: cover center;
+      height: 1080px;
+      width: 1920px;
+      /*background-size: 100% 1300vh;
+      height: 100vh;
+      width: 100%;*/
+      overflow: hidden;
+      position: absolute;
+      animation: rain 1.3s steps(13) infinite;
+   }
+
+   @keyframes rain{
+      from{background-position-x:0px;}
+      to{background-position-y:-14040px;}
+      /*to{background-position-y:-1300vh;}*/
+   }
+
+   .text {
+      width: 480.3px;
+      height: 60vh;   
+      left: 294.2px;
+      top: 316px;
+      /*width: 480.3px;
+      height: 453.1px;
+      left: 294.2px;
+      top: 316px;*/
+      position: absolute;
+      padding: 20px;
+   }
 }
 
-.rain {
-   background: url(rain.png) no-repeat;
-   background-size: 1920px;
-   background-position: cover center;
-   height: 1080px;
-   width: 1920px;
-   overflow: hidden;
-   position: absolute;
-   animation: rain 1.3s steps(13) infinite;
-}
+@media (max-aspect-ratio: 4/3) {
+   .bulletin {
+      position: absolute;
+      background: url(bulletin.svg) no-repeat;
+      background-size: cover;
+      background-position: 13% 0%;
+      height: 100%;
+      width: 100%;
+   }
+   .rain {
+      background: url(rain.png) no-repeat;
+      background-size: cover;
+      background-position: -6vh 0%;
+      background-size: 100% 1300vh;
+      height: 100vh;
+      width: 170vh;
+      overflow: hidden;
+      position: absolute;
+      animation: rain 1.3s steps(13) infinite;
+   }
 
-.text {
-   width: 480.3px;
-   height: 453.1px;
-   left: 294.2px;
-   top: 316px;
-   position: absolute;
-   padding: 20px;
-}
+   @keyframes rain{
+      from{background-position-y:0px;}
+      to{background-position-y:-1300vh;}
+   }
 
-@keyframes rain{
-   from{background-position-x:0px;}
-   to{background-position-y:-14040px;}
+   .text {
+      width: 300px;
+      height: 300px;   
+      left: 22vw;
+      top: 31%;
+      position: absolute;
+      padding: 20px;
+   }
 }
