@@ -1,0 +1,88 @@
+html {
+   image-rendering: optimizeSpeed;
+   image-rendering: -moz-crisp-edges;
+   image-rendering: -o-crisp-edges; 
+   image-rendering: -webkit-optimize-contrast;
+   image-rendering: pixelated;
+   image-rendering: optimize-contrast;
+   -ms-interpolation-mode: nearest-neighbor;   
+   /*overflow: hidden;*/
+   background-color: #cbf2ff;
+}
+
+.background {
+   background: url(background.svg) no-repeat;
+   background-size: 1920px;
+   background-position: cover center;
+   height: 1080px;
+   width: 1920px;
+   position: absolute;
+}
+
+.treefort {
+   background: url(treefort.svg) no-repeat;
+   background-size: 1920px;
+   background-position: cover center;
+   height: 1080px;
+   width: 1920px;
+   position: absolute;
+}
+
+.foreground {
+   background: url(foreground.png) no-repeat;
+   background-size: 1920px;
+   background-position: cover center;
+   height: 1080px;
+   width: 1920px;
+   position: absolute;
+}
+
+.tree {
+   background: url(tree.png) no-repeat;
+   background-size: 1920px;
+   background-position: cover center;
+   height: 1080px;
+   width: 1920px;
+   overflow: hidden;
+   position: absolute;
+   animation: tree .5s steps(2) infinite;
+}
+
+@keyframes tree{
+   from{background-position-y:0px;}
+   to{background-position-y:-2160px;}
+}
+
+.grass {
+   background: url(grass.png) no-repeat;
+   background-size: 1920px;
+   background-position: cover center;
+   height: 1080px;
+   width: 1920px;
+   overflow: hidden;
+   position: absolute;
+   animation: grass .5s steps(3) infinite;
+}
+
+@keyframes grass{
+   from{background-position-y:0px;}
+   to{background-position-y:-3240px;}
+}
+
+.deer {
+   background: url(deer.png) no-repeat;
+   background-size: 900px 300px;
+   background-position: cover center;
+   height: 300px;
+   width: 300px;
+   overflow: hidden;
+   position: absolute;
+   right: 640px;
+   top: 350px;
+   animation: deer 1s steps(3) infinite;
+}
+
+@keyframes deer{
+   from{background-position-x:0px;}
+   to{background-position-x:-900px;}
+}
