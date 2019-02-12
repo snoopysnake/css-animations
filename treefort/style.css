@@ -28,6 +28,59 @@ html {
    position: absolute;
 }
 
+.treefort-1 {
+   background: url(treefort1.svg) no-repeat;
+   height: 440px;
+   width: 440px;
+   top: 155px;
+   right: 165px;
+   position: absolute;
+}
+
+.rope-1 {
+   background: url(rope1.svg) no-repeat;
+   height: 60px;
+   width: 60px;
+   top: 145px;
+   right: 165px;
+   position: absolute;
+
+}
+
+.rope-2 {
+   background: url(rope2.svg) no-repeat;
+   height: 875px;
+   width: 80px;
+   top: 190px;
+   right: 175px;
+   position: absolute;
+   animation-duration: 1s;
+   transform-origin: 100px 0px;
+   animation: rope 10s infinite;
+}
+
+@keyframes rope {
+    0%,5% {
+        transform: rotate(0deg);
+    }
+    13% {
+        transform: rotate(1.4deg);
+    }
+    28% {
+        transform: rotate(-1.3deg);
+    }
+    43% {
+        transform: rotate(1.1deg);
+    }
+    63% {
+        transform: rotate(-1.1deg);
+    }
+    68% {
+        /*transform: rotate(-1.1deg);*/
+    }
+}
+
+
 .foreground {
    background: url(foreground.png) no-repeat;
    background-size: 1920px;
@@ -38,40 +91,42 @@ html {
 }
 
 .tree {
-   background: url(tree.png) no-repeat;
+   background: url(tree1.png) no-repeat;
    background-size: 1920px;
    background-position: cover center;
    height: 1080px;
    width: 1920px;
    overflow: hidden;
    position: absolute;
-   animation: tree .5s steps(2) infinite;
+   animation: tree 5s steps(8) infinite;
 }
 
 @keyframes tree{
-   from{background-position-y:0px;}
-   to{background-position-y:-2160px;}
+   0%,15%{background-position-y:0px;}
+   75%{background-position-y:-8640px;}
+   75.001%{background-position-y:0px;}
 }
 
 .grass {
-   background: url(grass.png) no-repeat;
+   background: url(grass1.png) no-repeat;
    background-size: 1920px;
    background-position: cover center;
    height: 1080px;
    width: 1920px;
    overflow: hidden;
    position: absolute;
-   animation: grass .5s steps(3) infinite;
+   animation: grass1 steps(14) 10s  infinite;
 }
 
-@keyframes grass{
-   from{background-position-y:0px;}
-   to{background-position-y:-3240px;}
+@keyframes grass1{
+   0%{background-position-y:0px;}
+   85%{background-position-y:-15120px;}
+   85.001%{background-position-y:0px;}
 }
 
 .deer {
-   background: url(deer.png) no-repeat;
-   background-size: 900px 300px;
+   background: url(deer1.png) no-repeat;
+   background-size: 3000px 300px;
    background-position: cover center;
    height: 300px;
    width: 300px;
@@ -79,10 +134,11 @@ html {
    position: absolute;
    right: 640px;
    top: 350px;
-   animation: deer 1s steps(3) infinite;
+   animation: deer 11s steps(10) 5s infinite;
 }
 
 @keyframes deer{
-   from{background-position-x:0px;}
-   to{background-position-x:-900px;}
+   0%{background-position-x:0px;}
+   60%{background-position-x:-3000px;}
+   60.001%{background-position-x:0px;}
 }
