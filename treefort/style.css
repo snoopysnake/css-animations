@@ -60,23 +60,26 @@ html {
 }
 
 @keyframes rope {
-    0%,5% {
+    0%,9% {
         transform: rotate(0deg);
     }
-    13% {
-        transform: rotate(1.4deg);
-    }
-    28% {
-        transform: rotate(-1.3deg);
-    }
-    43% {
+    17% {
         transform: rotate(1.1deg);
     }
-    63% {
-        transform: rotate(-1.1deg);
+    31% {
+        transform: rotate(-2deg);
     }
-    68% {
-        /*transform: rotate(-1.1deg);*/
+    46% {
+        transform: rotate(1.1deg);
+    }
+    67% {
+        transform: rotate(-1.2deg);
+    }
+    75% {
+        transform: rotate(.5deg);
+    }
+    85% {
+        transform: rotate(-1.5deg);
     }
 }
 
@@ -103,8 +106,8 @@ html {
 
 @keyframes tree{
    0%,15%{background-position-y:0px;}
-   75%{background-position-y:-8640px;}
-   75.001%{background-position-y:0px;}
+   85%{background-position-y:-8640px;}
+   85.001%{background-position-y:0px;}
 }
 
 .grass {
@@ -134,7 +137,7 @@ html {
    position: absolute;
    right: 640px;
    top: 350px;
-   animation: deer 11s steps(10) 5s infinite;
+   animation: deer 13s steps(10) 5s infinite;
 }
 
 @keyframes deer{
